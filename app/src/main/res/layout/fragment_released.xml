@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/top_bar">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/released_card"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="@color/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button_rating"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:backgroundTint="@color/top_bar"
+                android:text="@string/header_rating"
+                app:layout_constraintStart_toEndOf="@+id/button_category"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button_category"
+                android:textSize="10sp"
+                android:layout_marginLeft="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/top_bar"
+                android:text="@string/header_category"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!--
+      * The padding bottom makes sure that recycle view shows the entire movie picture of
+      * the last movie item in the list
+     -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/released_refresh">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_released"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="?attr/actionBarSize"
+            app:layout_constraintTop_toBottomOf="@+id/released_card"
+            tools:layout_editor_absoluteX="0dp" >
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

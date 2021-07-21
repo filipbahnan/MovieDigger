@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MovieDigger" parent="Theme.MaterialComponents">
+        <item name="bottomNavigationStyle">@style/Widget.MaterialComponents.BottomNavigationView.Colored</item>
+        <item name="colorPrimary">@color/top_bar</item>
+        <item name="colorOnPrimary">@color/selected_tab</item>
+        <item name="fontFamily">@font/montserrat_medium</item>
+    </style>
+</resources>
