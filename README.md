@@ -6,4 +6,5 @@ This was an one month school project where we were given the task to develop a m
 
 This application uses some google apis for youtube and maps but also themoviedb to obtain movie information. This information is retrieved from a flask server.
 
+Demo:
 [![DEMO](https://img.youtube.com/vi/dLSPP8pP7b0/0.jpg)](https://youtu.be/dLSPP8pP7b0)
